@@ -1,0 +1,40 @@
+name: Deploy theme
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: lts/*
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - run: pnpm install --frozen-lockfile
+
+      # Rebuild assets/built from source CSS/JS so edits to assets/css or assets/js ship
+      - run: pnpm build
+
+      - uses: TryGhost/action-deploy-theme@v1
+        with:
+          api-url: ${{ secrets.GHOST_URL }}
+          api-key: ${{ secrets.GHOSTA_KEY }}
+          exclude: "node_modules/* .git/* .github/* dist/* gulpfile.js pnpm-lock.yaml pnpm-workspace.yaml AGENTS.md CLAUDE.md"
