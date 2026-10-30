@@ -312,3 +312,73 @@ header.site.scrolled .mark.has-logo img{height:34px}
 .foot-id{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.25rem}
 .foot-id img{display:block;height:26px;width:auto}
 .hide-pv .pv{display:none!important}
+
+/* ===== Editor-driven sections (content from Ghost pages) ===== */
+.sec-body{color:var(--muted);font-size:1.0625rem}
+.sec-body > *{max-width:46rem}
+.sec-body > * + *{margin-top:1rem}
+.sec-body h2,.sec-body h3,.sec-body h4{color:var(--ink);font-family:var(--f-display)}
+.sec-body h2{font-size:1.5rem;font-weight:800;font-stretch:110%;margin-top:2.75rem;padding-bottom:.6rem;border-bottom:3px solid var(--ink);max-width:none}
+.sec-body h3{font-size:1.15rem;font-weight:750;font-stretch:104%;margin-top:1.6rem}
+.sec-body > :first-child{margin-top:0}
+.sec-body h2 + *,.sec-body h3 + *{margin-top:.4rem}
+.sec-body strong{color:var(--ink)}
+.sec-body a{color:var(--ink);font-weight:600;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:.2em}
+.sec-body ul{padding-left:1.2rem}.sec-body li + li{margin-top:.4rem}
+.sec-body hr{border:0;height:3px;width:3rem;background:var(--gold);margin:2.25rem 0}
+.sec-body blockquote{margin:2.5rem 0 0;font:700 1.25rem/1.3 var(--f-display);font-stretch:104%;color:var(--ink);padding-left:1rem;border-left:3px solid var(--gold)}
+.sec-body figure{margin:2rem 0 0;max-width:none}.sec-body img{display:block;max-width:100%;height:auto}
+.sec-body figcaption{font-size:.85rem;margin-top:.5rem}
+/* numbered list = step cards */
+.sec-body ol{list-style:none;padding:0;max-width:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:2rem;counter-reset:s;margin-top:1.75rem}
+.sec-body ol li{margin:0;border-top:3px solid var(--gold);padding-top:1rem;counter-increment:s}
+.sec-body ol li::before{content:"Step " counter(s);display:block;font:500 .78rem/1 var(--f-mono);color:var(--gold-ink);margin-bottom:.6rem}
+.sec-body ol li strong:first-child{display:block;font:750 1.15rem/1.3 var(--f-display);margin-bottom:.35rem}
+/* Ghost cards */
+.sec-body .kg-callout-card{background:var(--wash)!important;border-left:4px solid var(--gold);border-radius:0;padding:1.1rem 1.25rem;color:var(--muted)}
+.sec-body .kg-callout-emoji{display:none}
+.sec-body .kg-button-card{max-width:none}
+.sec-body .kg-btn{display:inline-flex;align-items:center;font:700 .95rem/1 var(--f-body);text-decoration:none;padding:.85rem 1.2rem;border:2px solid var(--gold);background:var(--gold)!important;color:#111!important;border-radius:0}
+.sec-body .kg-btn:hover{background:transparent!important;color:var(--ink)!important}
+.sec-body .kg-toggle-card{background:transparent!important;box-shadow:none!important;border-radius:0!important;padding:1.15rem 0!important;border-bottom:1px solid var(--line);max-width:52rem}
+.sec-body .kg-toggle-card + .kg-toggle-card{margin-top:0}
+.sec-body .kg-toggle-card:first-of-type{border-top:3px solid var(--ink)}
+.sec-body .kg-toggle-heading-text{font:700 1.08rem/1.35 var(--f-display)!important;color:var(--ink)}
+.sec-body .kg-toggle-card-icon{color:var(--gold-ink)}
+.sec-body .kg-toggle-content{color:var(--muted)}
+/* bullet list = cards (partners, what you get, ways in, alumni) */
+.ed-who .sec-body ul,.ed-get .sec-body ul,.ed-ways .sec-body ul,.ed-alumni .sec-body ul{list-style:none;padding:0;max-width:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.5rem;margin-top:0}
+.ed-who .sec-body li,.ed-get .sec-body li,.ed-ways .sec-body li,.ed-alumni .sec-body li{margin:0;border:1px solid var(--line);background:var(--paper);padding:1.5rem;transition:transform .25s,border-color .25s}
+.ed-who .sec-body li:hover,.ed-get .sec-body li:hover{transform:translateY(-3px);border-color:var(--gold)}
+.ed-who .sec-body li strong:first-child,.ed-get .sec-body li strong:first-child,.ed-ways .sec-body li strong:first-child,.ed-alumni .sec-body li strong:first-child{display:block;font:800 1.25rem/1.25 var(--f-display);font-stretch:106%;margin-bottom:.5rem}
+/* platforms: heading + chips */
+.ed-platforms .sec-body h3{font:500 .78rem/1 var(--f-mono);color:var(--gold-ink);letter-spacing:.02em;margin-top:1.75rem}
+.ed-platforms .sec-body ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.7rem;max-width:none}
+.ed-platforms .sec-body li{margin:0;font:700 .95rem/1 var(--f-display);color:var(--ink);border:1px solid var(--line);padding:.5rem .65rem;background:var(--paper)}
+/* clients: bullet names or a gallery of logos */
+.ed-clients .sec-body ul{list-style:none;padding:0;max-width:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.ed-clients .sec-body li{margin:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:96px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem;font:700 .95rem/1.25 var(--f-display);color:var(--muted)}
+.ed-clients .kg-gallery-card{max-width:none}
+.ed-clients .kg-gallery-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.ed-clients .kg-gallery-row{display:contents}
+.ed-clients .kg-gallery-image{flex:none!important;margin:0!important;border-right:1px solid var(--line);border-bottom:1px solid var(--line);height:110px;display:flex;align-items:center;justify-content:center;padding:1.25rem}
+.ed-clients .kg-gallery-image img{width:auto!important;height:auto!important;max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .25s,opacity .25s}
+.ed-clients .kg-gallery-image:hover img{filter:none;opacity:1}
+/* dark band variant (students "ways in") */
+.band .sec-body{color:var(--band-muted)}
+.band .sec-body h2,.band .sec-body h3,.band .sec-body strong,.band .sec-body blockquote,.band .sec-body a{color:var(--band-ink)}
+.band.ed-ways .sec-body li{background:transparent;border-color:var(--band-line)}
+/* work cards from #work posts */
+a.case{text-decoration:none;color:inherit}
+.case .art.has-img{padding:0;background:var(--wash)}
+.case .art img{width:100%;height:100%;object-fit:cover;display:block}
+a.case:hover h3{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:.2em}
+/* services: each "##" heading starts a column (Design & produce | Host) */
+@media (min-width:900px){
+  .ed-services .sec-body{columns:2;column-gap:4rem}
+  .ed-services .sec-body > *{max-width:none}
+  .ed-services .sec-body h2{margin-top:0;-webkit-column-break-before:column;break-before:column}
+  .ed-services .sec-body h2:first-child{-webkit-column-break-before:auto;break-before:auto}
+  .ed-services .sec-body h3{break-after:avoid}
+  .ed-services .sec-body p{break-inside:avoid}
+}

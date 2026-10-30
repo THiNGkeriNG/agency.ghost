@@ -26,6 +26,18 @@
     </div>
   </div>
 
+  {{#get "pages" filter="slug:students-what-you-get" limit="1"}}{{#foreach pages}}
+  <section id="get" class="ed ed-get">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What you get</p>
+        <h2>{{title}}</h2>
+        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+      </div>
+      <div class="sec-body">{{content}}</div>
+    </div>
+  </section>
+{{/foreach}}{{else}}
   <section id="get">
     <div class="wrap">
       <div class="sec-head">
@@ -40,7 +52,20 @@
       </div>
     </div>
   </section>
+{{/get}}
 
+  {{#get "pages" filter="slug:students-ways-in" limit="1"}}{{#foreach pages}}
+  <div class="ed ed-ways band pad" id="ways">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Three ways in</p>
+        <h2>{{title}}</h2>
+        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+      </div>
+      <div class="sec-body">{{content}}</div>
+    </div>
+  </div>
+{{/foreach}}{{else}}
   <div class="band pad" id="ways">
     <div class="wrap">
       <div class="sec-head">
@@ -56,7 +81,20 @@
       <p class="quote">This is not employment. Doing is learning.</p>
     </div>
   </div>
+{{/get}}
 
+  {{#get "pages" filter="slug:students-how" limit="1"}}{{#foreach pages}}
+  <section id="how" class="ed ed-how">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>{{title}}</h2>
+        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+      </div>
+      <div class="sec-body">{{content}}</div>
+    </div>
+  </section>
+{{/foreach}}{{else}}
   <section id="how">
     <div class="wrap">
       <div class="sec-head">
@@ -72,7 +110,20 @@
       </ol>
     </div>
   </section>
+{{/get}}
 
+  {{#get "pages" filter="slug:students-alumni" limit="1"}}{{#foreach pages}}
+  <section class="ed ed-alumni alumni alt" id="alumni">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">After graduation</p>
+        <h2>{{title}}</h2>
+        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+      </div>
+      <div class="sec-body">{{content}}</div>
+    </div>
+  </section>
+{{/foreach}}{{else}}
   <section class="alumni alt" id="alumni">
     <div class="wrap">
       <div>
@@ -87,7 +138,20 @@
       </ol>
     </div>
   </section>
+{{/get}}
 
+  {{#get "pages" filter="slug:students-faq" limit="1"}}{{#foreach pages}}
+  <section id="faq" class="ed ed-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2>{{title}}</h2>
+        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+      </div>
+      <div class="sec-body">{{content}}</div>
+    </div>
+  </section>
+{{/foreach}}{{else}}
   <section id="faq">
     <div class="wrap">
       <div class="sec-head">
@@ -103,6 +167,7 @@
       </div>
     </div>
   </section>
+{{/get}}
 
   <div class="cross">
     <div class="wrap">

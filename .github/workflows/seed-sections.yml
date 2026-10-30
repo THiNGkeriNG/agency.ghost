@@ -1,0 +1,25 @@
+name: Seed section pages (drafts)
+
+on:
+  push:
+    branches: [main]
+    paths: [scripts/seed-sections.json, scripts/seed-sections.mjs]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 22
+      - run: node scripts/seed-sections.mjs
+        env:
+          GHOST_URL: ${{ secrets.GHOST_URL }}
+          GHOSTA_KEY: ${{ secrets.GHOSTA_KEY }}

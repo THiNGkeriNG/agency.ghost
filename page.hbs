@@ -3,6 +3,14 @@
 
 {{#post}}
 
+{{!-- Homepage / students-page section sources are edited as pages but shouldn't stand alone --}}
+{{#has slug="home-services, home-platforms, home-partners, home-clients, home-how, home-faq"}}
+<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={{@site.url}}/">
+{{/has}}
+{{#has slug="students-what-you-get, students-ways-in, students-how, students-alumni, students-faq"}}
+<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={{@site.url}}/students/">
+{{/has}}
+
 <main class="gh-main">
     <article class="gh-article {{post_class}}">
 

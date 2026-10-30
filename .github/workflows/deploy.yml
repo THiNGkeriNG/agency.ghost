@@ -37,4 +37,4 @@ jobs:
         with:
           api-url: ${{ secrets.GHOST_URL }}
           api-key: ${{ secrets.GHOSTA_KEY }}
-          exclude: "node_modules/* .git/* .github/* dist/* gulpfile.js pnpm-lock.yaml pnpm-workspace.yaml AGENTS.md CLAUDE.md"
+          exclude: "node_modules/* .git/* .github/* dist/* scripts/* gulpfile.js pnpm-lock.yaml pnpm-workspace.yaml AGENTS.md CLAUDE.md"

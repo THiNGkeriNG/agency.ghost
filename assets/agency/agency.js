@@ -37,7 +37,7 @@
   if (!('IntersectionObserver' in window)) { document.documentElement.classList.add('io-off'); return; }
 
   /* Reveal sections and staggered children as they enter */
-  var targets = document.querySelectorAll('.tla .sec-head, .tla .svc article, .tla .plat > div, .tla .three > *, .tla .cols article, .tla .steps li, .tla .clients li, .tla .loop li, .tla .faq, .tla .fund, .tla .motto, .tla .quote');
+  var targets = document.querySelectorAll('.tla .sec-head, .tla .sec-body > *, .tla .svc article, .tla .plat > div, .tla .three > *, .tla .cols article, .tla .steps li, .tla .clients li, .tla .loop li, .tla .faq, .tla .fund, .tla .motto, .tla .quote');
   targets.forEach(function (t) {
     var sibs = t.parentElement ? Array.prototype.indexOf.call(t.parentElement.children, t) : 0;
     t.style.setProperty('--d', Math.min(sibs, 8) * 70 + 'ms');
