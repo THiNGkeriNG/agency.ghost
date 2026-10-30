@@ -1,12 +1,234 @@
-{{!< default}}
-{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
+{{!< agency}}
+<main id="top" class="tla">
+  <div class="band hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">A learning design studio at CU Denver</p>
+        <h1>Learning design that gets built, by the designers <em class="draw">learning to build it.</em></h1>
+        <p class="lede">We design, produce, and host courses, e-learning, and media. The work is done by Learning Design &amp; Technology graduate students, each matched to the project that fits.</p>
+        <div class="ctas">
+          <a class="btn" href="https://secure.touchnet.net/C20369_ustores/web/product_detail.jsp?PRODUCTID=514">Buy project hours <span class="arr">→</span></a>
+          <a class="btn ghost" href="#contact">Talk with us</a>
+        </div>
+      </div>
+      <aside class="ticket" aria-label="What project hours cost">
+        <div class="top">
+          <p class="eyebrow">Project hours</p>
+          <div class="price"><b class="mono">$40</b><span>per hour, flat</span></div>
+          <p>Buy a block of hours. They stay banked until your project needs them.</p>
+          <div class="est" data-rate="40">
+            <label for="est-hours" class="meter-l"><span>Size a block</span><span class="mono"><b id="est-h">40</b> hrs = <b id="est-total">$1,600</b></span></label>
+            <input id="est-hours" type="range" min="10" max="200" step="5" value="40" aria-describedby="est-note">
+          </div>
+          <p class="ex" id="est-note">Drag to size a block. Your balance draws down as the work happens.</p>
+        </div>
+        <div class="bot">
+          <span class="k">Partnership projects</span>
+          <div class="rows">
+            <div><span>SEHD faculty &amp; programs</span><span>No cost</span></div>
+            <div><span>Agency alumni who mentor</span><span>No cost</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
 
-{{> "components/header" headerStyle=@custom.header_style}}
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Design. Produce. Host.</h2>
+        <p>Bring us a course to design, a training to produce, or an academy that needs a home. Take any piece à la carte or hand us the whole thing.</p>
+      </div>
+      <div class="split">
+        <div class="col">
+          <div class="col-h"><h3>Design &amp; produce</h3><span>Courses, e-learning, media</span></div>
+          <div class="svc">
+            <article><h4>Learning experience design</h4><p>Needs analysis, learner journeys, and course architecture before anything gets built.</p></article>
+            <article><h4>Canvas course design and redesign</h4><p>New courses, rebuilt courses, and the polish that makes an existing course easier to teach and take.</p></article>
+            <article><h4>E-learning and microlearning</h4><p>Self-paced modules and short, focused pieces people can finish between meetings.</p><span class="tools">Articulate 360 · Rise · Storyline</span></article>
+            <article><h4>Instructional media</h4><p>Scripted explainers, screen recordings, edited lecture video, and podcasts.</p></article>
+            <article><h4>Grant support</h4><p>Learning and evaluation components for grant proposals and funded projects.</p></article>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-h"><h3>Host</h3><span>For events, academies, and self-paced training</span></div>
+          <div class="svc">
+            <article><h4>Canvas hosting and LMS administration</h4><p>We host your PD workshop, course, or academy in Canvas and administer it for you. We can be your LMS and your LMS admin.</p><span class="tools">Canvas</span></article>
+            <article><h4>E-learning hosting</h4><p>We keep your Articulate Rise modules online, with options to track participation and completion.</p><span class="tools">Articulate Rise</span></article>
+            <article><h4>Video hosting</h4><p>Publishing and managing your video library on the platform that fits your audience.</p><span class="tools">YouTube · Wistia</span></article>
+            <article><h4>Podcast production and distribution</h4><p>Recorded, edited, and published to all the major platforms.</p><span class="tools">Riverside · PodBean → Spotify · Apple Podcasts</span></article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-{{#match @custom.header_style "Magazine"}}
-    {{> "components/featured" showFeatured=@custom.show_featured_posts limit=4}}
-{{/match}}
+  <section id="platforms" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Platforms</p>
+        <h2>We work where you work.</h2>
+        <p>These are platforms we've built in and published on. We adapt to our partners' tools rather than asking them to adopt ours.</p>
+      </div>
+      <div class="plat">
+        <div><h3>Courses &amp; communities</h3><ul><li>Canvas</li><li>Blackboard</li><li>Thinkific</li><li>Teachable</li><li>Circle.so</li></ul></div>
+        <div><h3>E-learning</h3><ul><li>Articulate Rise</li><li>Articulate Storyline</li></ul></div>
+        <div><h3>Media &amp; design</h3><ul><li>Adobe Creative Suite</li><li>Riverside.fm</li><li>Podbean</li><li>YouTube</li><li>Spotify</li><li>Instagram</li></ul></div>
+        <div><h3>Web &amp; publishing</h3><ul><li>Ghost</li><li>WordPress</li><li>Carrd</li><li>Docmost</li><li>Shorthand</li></ul></div>
+        <div><h3>AI</h3><ul><li>ChatGPT</li><li>Claude</li><li>Gemini</li></ul></div>
+      </div>
+      <p class="motto">Always learning, always teaching, <span>always adapting.</span></p>
+    </div>
+  </section>
 
-{{> "components/cta"}}
+  <section id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Who we work with</p>
+        <h2>Three kinds of partners, one matching process.</h2>
+        <p>Brad Hinson, the Agency's director, meets with every client and every student to find the right designer for your project.</p>
+      </div>
+      <div class="three">
+        <article class="aud">
+          <span class="tag">Clients</span>
+          <h3>Organizations</h3>
+          <p class="rate mono">$40<small>per hour</small></p>
+          <p>Schools, universities, agencies, nonprofits, and companies that need learning design, production, or hosting.</p>
+          <a href="https://secure.touchnet.net/C20369_ustores/web/product_detail.jsp?PRODUCTID=514">Buy project hours</a>
+        </article>
+        <article class="aud">
+          <span class="tag">SEHD partners</span>
+          <h3>Faculty and programs</h3>
+          <p class="rate">No cost</p>
+          <p>CU Denver SEHD professors and programs who want help with the design, redesign, media, or polish of a Canvas course or piece of media.</p>
+          <a href="#contact">Start a partnership</a>
+        </article>
+        <article class="aud">
+          <span class="tag">Alumni partners</span>
+          <h3>Agency alumni</h3>
+          <p class="rate">No cost</p>
+          <p>Former Agency students now working in the field. Bring us a project, mentor the intern we assign, and the work is free.</p>
+          <a href="#contact">Bring us a project</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-{{> "components/post-list" feed="home" postFeedStyle=@custom.post_feed_style showTitle=true showSidebar=@custom.show_publication_info_sidebar}}
+  <section id="work" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>The kinds of projects we take on.</h2>
+        <p><span class="pv">Preview: placeholder cards. Swap in real projects, or delete this section.</span></p>
+      </div>
+      <div class="three">
+        <article class="case">
+          <div class="art"><span>Image: project screenshot</span></div>
+          <div class="body"><h3>Hosted onboarding academy for a statewide agency</h3><p>A self-paced, multi-module academy built and run in Canvas, with completion tracking.</p><div class="tags"><span>Canvas</span><span>Hosting</span></div></div>
+        </article>
+        <article class="case">
+          <div class="art"><span>Image: project screenshot</span></div>
+          <div class="body"><h3>Course redesign with an SEHD professor</h3><p>A graduate course rebuilt for clarity, with new media for each module.</p><div class="tags"><span>Canvas</span><span>Media</span></div></div>
+        </article>
+        <article class="case">
+          <div class="art"><span>Image: project screenshot</span></div>
+          <div class="body"><h3>Rise training series for a corporate client</h3><p>Short e-learning modules, hosted with participation and completion reporting.</p><div class="tags"><span>Articulate Rise</span><span>Hosting</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Who we've worked with</p>
+        <h2>Partners across education, health, government, and industry.</h2>
+        <p><span class="pv">Preview: names stand in for logos. Real logo files go here.</span></p>
+      </div>
+      <ul class="clients">
+        <li>Academic Impressions</li>
+        <li>Apple Education</li>
+        <li>Colorado Department of Education</li>
+        <li>Colorado Office of Employment First</li>
+        <li>Colorado School of Public Health</li>
+        <li>CU Anschutz Medical Campus</li>
+        <li>CU Boulder</li>
+        <li>CU Denver</li>
+        <li>Lived X</li>
+        <li>Savory Global</li>
+        <li>St. Vrain Valley Schools Innovation Center</li>
+        <li>Visually Impaired Preschool Services</li>
+        <li>World Trade Center Denver</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="how" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From first conversation to finished work.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Talk with us</h3><p>Tell us what you need and when. We'll help you size the project.</p></li>
+        <li><h3>Get matched</h3><p>We find the intern whose skills and interests fit your project best, so you get the right designer and they get the right experience.</p></li>
+        <li><h3>Set up the work</h3><p>Paying clients buy a block of hours through the CU Denver storefront. Partnership projects start once the match is set.</p></li>
+        <li><h3>Build together</h3><p>Work runs remote and mostly asynchronous, with check-ins by video call. You mentor; we stay with the project.</p></li>
+      </ol>
+      <div class="fund">
+        <p><b>Where client fees go.</b> They fund the Agency's infrastructure: Articulate 360, Riverside, SEHD Canvas, and the other specialized software our students use to build and host your project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2>For clients and partners.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>What does it cost?</summary><p>Organizations pay a flat $40 per hour. You buy a block of hours through the CU Denver storefront, and they stay banked until your project uses them. Projects with SEHD faculty and programs, and with Agency alumni who mentor, are free.</p></details>
+        <details><summary>Can you host our course or training?</summary><p>Yes. We host Canvas courses, workshops, and academies and can administer them as your LMS. We host Articulate Rise modules with participation and completion tracking, manage video on YouTube or Wistia, and publish podcasts through Riverside and PodBean to Spotify, Apple Podcasts, and the other major platforms. Take any of it à la carte.</p></details>
+        <details><summary>Who does the work?</summary><p>Graduate students in CU Denver's Learning Design &amp; Technology program, enrolled in the INTE 6930 internship, with you as their client mentor.</p></details>
+        <details><summary>What's expected of me as a client?</summary><p>Mentorship. You share what you need, give feedback, and meet with your intern for check-ins by video call. Most of the work happens asynchronously in between.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="cross">
+    <div class="wrap">
+      <p>Are you an LDT student?<span>See how Agency projects work, what you'll learn, and how to apply.</span></p>
+      <a class="btn ghost" href="{{@site.url}}/students/">For students <span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="band contact" id="contact">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Have a project in mind?</h2>
+        <p class="lede">Clients, SEHD faculty, and alumni all start the same way. Send a few lines about what you need and when you need it, and we'll set up a time to talk.</p>
+        <div class="ctas">
+          <a class="btn" href="mailto:learning.agency@ucdenver.edu?subject=Project%20inquiry">Email the Agency <span class="arr">→</span></a>
+          <a class="btn ghost" href="https://secure.touchnet.net/C20369_ustores/web/product_detail.jsp?PRODUCTID=514">Buy project hours</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <span class="k">Email</span>
+          <div class="copy"><span class="v" id="email">learning.agency@ucdenver.edu</span><button type="button" id="copy-email">Copy</button></div>
+        </div>
+        <div class="row">
+          <span class="k">Director</span>
+          <span class="v">Brad Hinson<small>Director, The Learning Agency · Faculty, INTE 6930</small></span>
+        </div>
+        <div class="row">
+          <span class="k">Office</span>
+          <span class="v">1380 Lawrence Street, Suite 724<small>Denver, CO 80204</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

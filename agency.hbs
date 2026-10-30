@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="{{asset "agency/agency.css"}}">
+    <script>document.documentElement.classList.add('js')</script>
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+<div class="util">
+  <div class="wrap">
+    <span class="lockup">CU Denver <span>·</span> School of Education &amp; Human Development</span>
+    <nav aria-label="University">
+      <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">Learning Design &amp; Technology</a>
+      <a href="https://education.ucdenver.edu/">SEHD</a>
+      <a href="https://www.ucdenver.edu/">CU Denver</a>
+    </nav>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="{{@site.url}}/" aria-label="The Learning Agency, home"><i aria-hidden="true"></i><b>The Learning Agency</b></a>
+    <div class="hd-right">
+      <nav class="switch" aria-label="Audience">
+        <a href="{{@site.url}}/" {{#is "home"}}aria-current="page"{{/is}}>For clients</a>
+        <a href="{{@site.url}}/students/" {{#is "page"}}aria-current="page"{{/is}}>For students</a>
+      </nav>
+      <nav class="mainnav" aria-label="Main">
+        {{#is "home"}}
+        <a href="#services">Services</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#who">Partners</a>
+        <a href="#work">Work</a>
+        <a class="btn sm" href="#contact">Contact</a>
+        {{else}}
+        <a href="#ways">Projects</a>
+        <a href="#how">How it works</a>
+        <a href="#alumni">Alumni</a>
+        <a class="btn sm" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply</a>
+        {{/is}}
+      </nav>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+</header>
+
+{{{body}}}
+
+<footer>
+  <div class="wrap">
+    <span>© {{date format="YYYY"}} The Learning Agency · School of Education &amp; Human Development · University of Colorado Denver</span>
+    <nav aria-label="Footer">
+      <a href="{{@site.url}}/">For clients</a>
+      <a href="{{@site.url}}/students/">For students</a>
+      <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">LDT</a>
+      <a href="https://education.ucdenver.edu/">SEHD</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="{{asset "agency/agency.js"}}"></script>
+{{ghost_foot}}
+</body>
+</html>

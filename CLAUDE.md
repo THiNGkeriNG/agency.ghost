@@ -9,3 +9,11 @@ Custom Ghost theme for The Learning Agency site (agency.cu.studio, Ghost on Clou
 
 ## Commands
 pnpm install --frozen-lockfile · pnpm build · pnpm dev
+
+## Structure
+- `agency.hbs` — layout for the landing pages (CU Denver utility bar, header with clients/students switch, footer). Loads only `assets/agency/agency.css` + `agency.js`, not Source's CSS.
+- `home.hbs` — client landing page at `/`. `page-students.hbs` — student page; needs a published Ghost page with slug `students`.
+- Posts, tags, authors still use Source's `default.hbs` and styling (not yet restyled).
+- Design source of truth: the "The Learning Agency" artifact (claude.ai/artifact/7VoDkWxC77L9F2AyktaQjJ). Brand: CU Denver black/white/gold #CFB87C, Archivo (wide display), Source Sans 3, IBM Plex Mono.
+- `.pv` elements are preview annotations — delete before real launch.
+- `assets/agency/` is deliberately outside `assets/js` so gulp doesn't bundle it into source.js.
