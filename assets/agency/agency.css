@@ -302,3 +302,13 @@ header.site.scrolled .wrap{padding-block:.5rem}
 .svc article:hover{padding-left:.6rem;border-bottom-color:var(--gold)}
 
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.hero h1 em.draw{background-position:0 0}}
+
+/* logos from Ghost admin */
+.mark.has-logo img{display:block;height:40px;width:auto;max-width:min(260px,60vw);object-fit:contain;transition:height .25s}
+header.site.scrolled .mark.has-logo img{height:34px}
+.lockup.has-logo{display:inline-flex;align-items:center;gap:.8rem}
+.lockup.has-logo img{display:block;height:22px;width:auto}
+.lockup.has-logo > span{color:var(--band-ink);border-left:1px solid var(--band-line);padding-left:.8rem}
+.foot-id{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.25rem}
+.foot-id img{display:block;height:26px;width:auto}
+.hide-pv .pv{display:none!important}

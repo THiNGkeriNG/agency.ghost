@@ -15,5 +15,6 @@ pnpm install --frozen-lockfile · pnpm build · pnpm dev
 - `home.hbs` — client landing page at `/`. `page-students.hbs` — student page; needs a published Ghost page with slug `students`.
 - Posts, tags, authors still use Source's `default.hbs` and styling (not yet restyled).
 - Design source of truth: the "The Learning Agency" artifact (claude.ai/artifact/7VoDkWxC77L9F2AyktaQjJ). Brand: CU Denver black/white/gold #CFB87C, Archivo (wide display), Source Sans 3, IBM Plex Mono.
-- `.pv` elements are preview annotations — delete before real launch.
+- `.pv` elements are preview annotations; hidden site-wide by the `show_preview_notes` setting.
 - `assets/agency/` is deliberately outside `assets/js` so gulp doesn't bundle it into source.js.
+- Ghost admin controls (Settings → Design → Theme): `cu_logo`, `show_preview_notes`, homepage hero text (eyebrow, headline, accent, intro), students hero text. Site logo and title come from Settings → General. Ghost caps themes at 20 custom settings; 19 are used — Source's homepage settings were retired to make room.

@@ -11,11 +11,15 @@
     <script>document.documentElement.classList.add('js')</script>
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}}{{#unless @custom.show_preview_notes}} hide-pv{{/unless}}">
 
 <div class="util">
   <div class="wrap">
+    {{#if @custom.cu_logo}}
+    <span class="lockup has-logo"><a href="https://www.ucdenver.edu/"><img src="{{img_url @custom.cu_logo size="s"}}" alt="CU Denver"></a><span>School of Education &amp; Human Development</span></span>
+    {{else}}
     <span class="lockup">CU Denver <span>·</span> School of Education &amp; Human Development</span>
+    {{/if}}
     <nav aria-label="University">
       <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">Learning Design &amp; Technology</a>
       <a href="https://education.ucdenver.edu/">SEHD</a>
@@ -26,7 +30,7 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="mark" href="{{@site.url}}/" aria-label="The Learning Agency, home"><i aria-hidden="true"></i><b>The Learning Agency</b></a>
+    <a class="mark{{#if @site.logo}} has-logo{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}">{{else}}<i aria-hidden="true"></i><b>{{@site.title}}</b>{{/if}}</a>
     <div class="hd-right">
       <nav class="switch" aria-label="Audience">
         <a href="{{@site.url}}/" {{#is "home"}}aria-current="page"{{/is}}>For clients</a>
@@ -55,7 +59,10 @@
 
 <footer>
   <div class="wrap">
-    <span>© {{date format="YYYY"}} The Learning Agency · School of Education &amp; Human Development · University of Colorado Denver</span>
+    <div class="foot-id">
+      {{#if @custom.cu_logo}}<a href="https://www.ucdenver.edu/"><img src="{{img_url @custom.cu_logo size="s"}}" alt="CU Denver"></a>{{/if}}
+      <span>© {{date format="YYYY"}} {{@site.title}} · School of Education &amp; Human Development · University of Colorado Denver</span>
+    </div>
     <nav aria-label="Footer">
       <a href="{{@site.url}}/">For clients</a>
       <a href="{{@site.url}}/students/">For students</a>

@@ -1,4 +1,4 @@
-<article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
+<article class="gh-card {{post_class}}{{#unless true}} no-image{{/unless}}">
     <div class="gh-card-link">
         {{#if feature_image}}
             <figure class="gh-card-image">
@@ -35,10 +35,10 @@
                         {{> "icons/lock"}}
                     {{/has}}
                 {{/unless}}<!--
-             -->{{#if @custom.show_author}}
+             -->{{#if true}}
                     <span class="gh-card-author">{{{t "By {authors}" authors=(authors autolink="false" separator=", ") }}}</span>
                 {{/if}}
-                {{#if @custom.show_publish_date}}
+                {{#if true}}
                     <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{#match @site.locale "~^" "en"}}{{date format="DD MMM YYYY"}}{{else}}{{date}}{{/match}}</time>
                 {{/if}}<!--
          --></footer>

@@ -4,8 +4,8 @@
     <div class="wrap">
       <div>
         <p class="eyebrow">For LDT students</p>
-        <h1>Practice the profession <em>before you graduate.</em></h1>
-        <p class="lede">Agency projects put you on real learning design work for real clients, with the software and the people of the field. Tell us what you want to get better at, and we'll find the project and the client mentor to match.</p>
+        <h1>{{@custom.students_headline}}{{#if @custom.students_headline_accent}} <em>{{@custom.students_headline_accent}}</em>{{/if}}</h1>
+        {{#if @custom.students_intro}}<p class="lede">{{@custom.students_intro}}</p>{{/if}}
         <div class="ctas">
           <a class="btn dark" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr">→</span></a>
           <a class="btn ghost" href="#syllabus" id="syllabus">Syllabus</a>

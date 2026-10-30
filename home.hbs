@@ -3,9 +3,9 @@
   <div class="band hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">A learning design studio at CU Denver</p>
-        <h1>Learning design that gets built, by the designers <em class="draw">learning to build it.</em></h1>
-        <p class="lede">We design, produce, and host courses, e-learning, and media. The work is done by Learning Design &amp; Technology graduate students, each matched to the project that fits.</p>
+        {{#if @custom.hero_eyebrow}}<p class="eyebrow">{{@custom.hero_eyebrow}}</p>{{/if}}
+        <h1>{{@custom.hero_headline}}{{#if @custom.hero_headline_accent}} <em class="draw">{{@custom.hero_headline_accent}}</em>{{/if}}</h1>
+        {{#if @custom.hero_intro}}<p class="lede">{{@custom.hero_intro}}</p>{{/if}}
         <div class="ctas">
           <a class="btn" href="https://secure.touchnet.net/C20369_ustores/web/product_detail.jsp?PRODUCTID=514">Buy project hours <span class="arr">→</span></a>
           <a class="btn ghost" href="#contact">Talk with us</a>
