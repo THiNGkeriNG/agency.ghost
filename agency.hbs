@@ -30,7 +30,7 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="mark{{#if @site.logo}} has-logo{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}">{{else}}<i aria-hidden="true"></i><b>{{@site.title}}</b>{{/if}}</a>
+    <a class="mark{{#if @site.logo}} has-logo{{/if}}{{#if @custom.compact_logo}} has-compact{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img class="logo-full" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}">{{#if @custom.compact_logo}}<img class="logo-compact" src="{{img_url @custom.compact_logo size="l"}}" alt="" aria-hidden="true">{{/if}}{{else}}<i aria-hidden="true"></i><b>{{@site.title}}</b>{{/if}}</a>
     <div class="hd-right">
       <nav class="switch" aria-label="Audience">
         <a href="{{@site.url}}/" {{#is "home"}}aria-current="page"{{/is}}>For clients</a>

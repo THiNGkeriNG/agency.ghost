@@ -304,8 +304,19 @@ header.site.scrolled .wrap{padding-block:.5rem}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.hero h1 em.draw{background-position:0 0}}
 
 /* logos from Ghost admin */
-.mark.has-logo img{display:block;height:40px;width:auto;max-width:min(260px,60vw);object-fit:contain;transition:height .25s}
-header.site.scrolled .mark.has-logo img{height:34px}
+/* full lockup 75px tall; on scroll, swap to the one-line compact logo (or shrink the full one) */
+.mark.has-logo{display:grid;align-items:center;justify-items:start}
+.mark.has-logo img{grid-area:1/1;display:block;width:auto;max-width:100%;transition:height .3s cubic-bezier(.2,.7,.2,1),opacity .25s}
+.mark.has-logo .logo-full{height:75px}
+.mark.has-logo .logo-compact{height:34px;opacity:0;visibility:hidden}
+header.site.scrolled .mark.has-logo .logo-full{height:48px}
+header.site.scrolled .mark.has-compact .logo-full{height:34px;opacity:0;visibility:hidden}
+header.site.scrolled .mark.has-compact .logo-compact{opacity:1;visibility:visible}
+@media (max-width:560px){
+  .mark.has-logo .logo-full{height:56px}
+  header.site.scrolled .mark.has-logo .logo-full{height:40px}
+  .mark.has-logo .logo-compact,header.site.scrolled .mark.has-compact .logo-full{height:28px}
+}
 .lockup.has-logo{display:inline-flex;align-items:center;gap:.8rem}
 .lockup.has-logo img{display:block;height:22px;width:auto}
 .lockup.has-logo > span{color:var(--band-ink);border-left:1px solid var(--band-line);padding-left:.8rem}

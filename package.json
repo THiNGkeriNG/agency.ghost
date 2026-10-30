@@ -150,6 +150,10 @@
                 "type": "image",
                 "description": "Small CU Denver logo for the top bar and footer. Both sit on black, so use a white or reversed version."
             },
+            "compact_logo": {
+                "type": "image",
+                "description": "One-line logo the header switches to after you scroll. Leave empty to just shrink the main logo."
+            },
             "show_preview_notes": {
                 "type": "boolean",
                 "default": true,

@@ -17,7 +17,7 @@ pnpm install --frozen-lockfile · pnpm build · pnpm dev
 - Design source of truth: the "The Learning Agency" artifact (claude.ai/artifact/7VoDkWxC77L9F2AyktaQjJ). Brand: CU Denver black/white/gold #CFB87C, Archivo (wide display), Source Sans 3, IBM Plex Mono.
 - `.pv` elements are preview annotations; hidden site-wide by the `show_preview_notes` setting.
 - `assets/agency/` is deliberately outside `assets/js` so gulp doesn't bundle it into source.js.
-- Ghost admin controls (Settings → Design → Theme): `cu_logo`, `show_preview_notes`, homepage hero text (eyebrow, headline, accent, intro), students hero text. Site logo and title come from Settings → General. Ghost caps themes at 20 custom settings; 19 are used — Source's homepage settings were retired to make room.
+- Ghost admin controls (Settings → Design → Theme): `cu_logo`, `show_preview_notes`, homepage hero text (eyebrow, headline, accent, intro), students hero text. Site logo and title come from Settings → General. Ghost caps themes at 20 custom settings; all 20 are used (compact_logo added) — Source's homepage settings were retired to make room.
 
 ## Editable sections
 - Landing sections render from Ghost pages by slug when published (`{{#get "pages"}}`), else fall back to the hard-coded markup in the template. Slugs: home-services, home-platforms, home-partners, home-clients, home-how, home-faq; students-what-you-get, students-ways-in, students-how, students-alumni, students-faq.

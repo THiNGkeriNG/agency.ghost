@@ -29,7 +29,8 @@
   var header = document.querySelector('header.site'), bar = document.querySelector('.progress i');
   var onScroll = function () {
     var y = window.scrollY, max = document.documentElement.scrollHeight - innerHeight;
-    if (header) header.classList.toggle('scrolled', y > 40);
+    /* hysteresis: the header changes height when it condenses, so use separate on/off points to avoid flicker */
+    if (header) { if (y > 90) header.classList.add('scrolled'); else if (y < 20) header.classList.remove('scrolled'); }
     if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
