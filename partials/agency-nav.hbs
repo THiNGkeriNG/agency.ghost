@@ -1,0 +1,10 @@
+{{!-- Main menu: Ghost Admin → Settings → Navigation (primary). Falls back to in-page links if empty. --}}
+{{#if @site.navigation}}
+{{#foreach @site.navigation}}<a href="{{this.url}}">{{label}}</a>{{/foreach}}
+{{else}}
+<a href="{{@site.url}}/#services">Services</a>
+<a href="{{@site.url}}/#how">How It Works</a>
+<a href="{{@site.url}}/#cost">Cost</a>
+<a href="{{@site.url}}/#work">Our Work</a>
+<a href="{{@site.url}}/students/">For Students</a>
+{{/if}}

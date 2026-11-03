@@ -148,7 +148,7 @@
             },
             "compact_logo": {
                 "type": "image",
-                "description": "One-line logo the header switches to after you scroll. Leave empty to just shrink the main logo."
+                "description": "White (reversed) one-line logo for the black bar that sticks to the top when you scroll."
             },
             "director_photo": {
                 "type": "image",
@@ -158,6 +158,11 @@
                 "type": "text",
                 "default": "",
                 "description": "Scheduling link for the free first hour (Calendly, Microsoft Bookings\u2026). Leave empty to use email."
+            },
+            "cta_label": {
+                "type": "text",
+                "default": "Free Project Plan",
+                "description": "Wording on the main call-to-action buttons."
             },
             "show_preview_notes": {
                 "type": "boolean",

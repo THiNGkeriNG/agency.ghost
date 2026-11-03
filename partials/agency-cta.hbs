@@ -1,0 +1,2 @@
+{{!-- Header call to action: label from Design → Theme → Cta label; link from Booking link --}}
+{{#is "page"}}<a class="btn {{cls}}" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr" aria-hidden="true">→</span></a>{{else}}<a class="btn {{cls}}" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}{{@site.url}}/#plan{{/if}}">{{@custom.cta_label}} <span class="arr" aria-hidden="true">→</span></a>{{/is}}

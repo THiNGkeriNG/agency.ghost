@@ -15,28 +15,29 @@
 
 <a class="skip" href="#top">Skip to content</a>
 
+<div class="topbar" id="topbar">
+  <div class="wrap">
+    <a class="tb-logo" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @custom.compact_logo}}<img src="{{img_url @custom.compact_logo size="l"}}" alt="{{@site.title}}">{{else}}<b>{{@site.title}}</b>{{/if}}</a>
+    <nav class="tb-util" aria-label="Quick links">
+      {{#if @site.secondary_navigation}}
+      {{#foreach @site.secondary_navigation}}<a href="{{this.url}}">{{label}}</a>{{/foreach}}
+      {{else}}
+      <a href="{{@site.url}}/students/">For Students</a>
+      <a href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply</a>
+      <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">LDT Program</a>
+      <a href="https://www.ucdenver.edu/">CU Denver</a>
+      {{/if}}
+    </nav>
+    <nav class="tb-main" aria-label="Main">{{> "agency-nav"}}</nav>
+    {{> "agency-cta" cls="gold xs tb-cta"}}
+  </div>
+</div>
+
 <header class="site">
   <div class="wrap">
-    <a class="mark{{#if @site.logo}} has-logo{{/if}}{{#if @custom.compact_logo}} has-compact{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img class="logo-full" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}">{{#if @custom.compact_logo}}<img class="logo-compact" src="{{img_url @custom.compact_logo size="l"}}" alt="" aria-hidden="true">{{/if}}{{else}}<b>{{@site.title}}</b><small>University of Colorado Denver</small>{{/if}}</a>
-    <nav class="mainnav" aria-label="Main">
-      {{#is "home"}}
-      <a href="#services">Services</a>
-      <a href="#how">How It Works</a>
-      <a href="#cost">Cost</a>
-      <a href="#work">Our Work</a>
-      <a href="{{@site.url}}/students/">For Students</a>
-      {{else}}
-      <a href="{{@site.url}}/">For Clients</a>
-      <a href="#get">What You Get</a>
-      <a href="#how">How It Works</a>
-      <a href="#faq">Questions</a>
-      {{/is}}
-    </nav>
-    {{#is "home"}}
-    <a class="btn dark sm" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}#first-hour{{/if}}">Free First Hour <span class="arr" aria-hidden="true">→</span></a>
-    {{else}}
-    <a class="btn dark sm" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr" aria-hidden="true">→</span></a>
-    {{/is}}
+    <a class="mark{{#if @site.logo}} has-logo{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}">{{else}}<b>{{@site.title}}</b><small>University of Colorado Denver</small>{{/if}}</a>
+    <nav class="mainnav" aria-label="Main">{{> "agency-nav"}}</nav>
+    {{> "agency-cta" cls="dark sm"}}
   </div>
 </header>
 

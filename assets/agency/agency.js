@@ -22,22 +22,22 @@
   if (finder) finder.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = finder.elements, who = f.who.value, what = f.what.value, when = f.when.value;
-    var lines = ['Hello,', '', "I'd like to set up a free first hour to talk about a project."];
+    var lines = ['Hello,', '', "I'd like to set up a free project plan for a project."];
     if (who) lines.push('', "I'm with: " + who);
     if (what) lines.push('I need help with: ' + what);
     if (when) lines.push('Timing: ' + when);
     lines.push('', 'A little more about it:', '', '');
-    location.href = 'mailto:learning.agency@ucdenver.edu?subject=' + encodeURIComponent('Free first hour' + (what ? ': ' + what : '')) +
+    location.href = 'mailto:learning.agency@ucdenver.edu?subject=' + encodeURIComponent('Free project plan' + (what ? ': ' + what : '')) +
       '&body=' + encodeURIComponent(lines.join('\n'));
   });
 
-  /* Header condenses (and swaps to the compact logo) on scroll; hysteresis avoids flicker */
-  var header = document.querySelector('header.site');
-  var onScroll = function () {
-    var y = window.scrollY;
-    if (header) { if (y > 90) header.classList.add('scrolled'); else if (y < 20) header.classList.remove('scrolled'); }
-  };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  /* Black bar sticks to the top; once the white header scrolls away it shows the compact logo + menu */
+  var topbar = document.getElementById('topbar'), header = document.querySelector('header.site');
+  if (topbar && header && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      var e = es[0]; topbar.classList.toggle('stuck', !e.isIntersecting && e.boundingClientRect.top < 0);
+    }, { rootMargin: '-' + topbar.offsetHeight + 'px 0px 0px 0px' }).observe(header);
+  }
 
   if (!('IntersectionObserver' in window)) { document.documentElement.classList.add('io-off'); return; }
 
@@ -62,12 +62,16 @@
 
   /* Scrollspy for in-page nav links */
   var links = {};
-  document.querySelectorAll('.mainnav a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  document.querySelectorAll('.mainnav a, .tb-main a').forEach(function (a) {
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    if (u.pathname !== location.pathname || !u.hash) return;
+    var id = u.hash.slice(1); (links[id] = links[id] || []).push(a);
+  });
   var spy = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
       var a = links[e.target.id]; if (!a || !e.isIntersecting) return;
-      Object.keys(links).forEach(function (k) { links[k].classList.remove('on'); });
-      a.classList.add('on');
+      Object.keys(links).forEach(function (k) { links[k].forEach(function (x) { x.classList.remove('on'); }); });
+      a.forEach(function (x) { x.classList.add('on'); });
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });

@@ -8,7 +8,7 @@
         <h1 id="hero-h">{{@custom.hero_headline}}</h1>
         {{#if @custom.hero_intro}}<p class="lede">{{@custom.hero_intro}}</p>{{/if}}
         <div class="ctas">
-          <a class="btn dark" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}mailto:learning.agency@ucdenver.edu?subject=Free%20first%20hour{{/if}}">Book Your Free First Hour <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn dark" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}mailto:learning.agency@ucdenver.edu?subject=Free%20project%20plan{{/if}}">{{@custom.cta_label}} <span class="arr" aria-hidden="true">→</span></a>
           <a class="link" href="#cost">See what it costs</a>
         </div>
       </div>
@@ -27,7 +27,7 @@
     <div class="wrap">
       <div class="finder-copy">
         <h2 id="finder-h">Where Will Your Project Take You?</h2>
-        <p>Tell us a little about what you need. It starts an email to the Agency, and we'll set up your free first hour.</p>
+        <p>Tell us a little about what you need. It starts an email to the Agency, and we'll set up a time to map out your free project plan.</p>
       </div>
       <form id="finder" class="finder-form">
         <label>I'm with
@@ -73,7 +73,7 @@
       <ul class="stats">
         <li>
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v14H14l-6 5v-5H5z"/><path d="M11 13h10M11 17h6"/></svg>
-          <b>1st Hour</b><span>Free. A no-pressure conversation about your project with Brad Hinson, the Agency's director.</span>
+          <b>Free Plan</b><span>A no-pressure hour with Brad Hinson, the Agency's director, to map out your project.</span>
         </li>
         <li>
           <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 9v14M20 12.5c-.8-1.2-2.2-1.8-4-1.8-2.3 0-3.8 1.1-3.8 2.7 0 3.8 7.8 2 7.8 5.8 0 1.7-1.6 2.9-4 2.9-1.9 0-3.4-.7-4.2-2"/></svg>
@@ -92,13 +92,13 @@
   </section>
 
   {{!-- FIRST HOUR: CU's testimonial slot, used for the human face of the Agency --}}
-  <section class="feature" id="first-hour" aria-labelledby="fh-h">
+  <section class="feature" id="plan" aria-labelledby="fh-h">
     <div class="wrap">
       <div class="feature-copy">
         <svg class="qmark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V22C0 9 7 2 19 0l2 5c-7 2-10 6-10 12h9v19zm27 0V22C27 9 34 2 46 0l2 5c-7 2-10 6-10 12h9v19z"/></svg>
         <h2 id="fh-h">You teach them the work. They teach you the tools.</h2>
-        <p>Every project starts with a free hour with Brad Hinson, the Agency's director and a faculty member in Learning Design &amp; Technology. Bring your idea, your questions, or just the feeling that you're in over your head. No strings attached.</p>
-        <a class="link" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}mailto:learning.agency@ucdenver.edu?subject=Free%20first%20hour{{/if}}">Book your free first hour <span class="arr" aria-hidden="true">→</span></a>
+        <p>Every project starts with a free project plan: an hour with Brad Hinson, the Agency's director and a faculty member in Learning Design &amp; Technology, to map out what you need. Bring your idea, your questions, or just the feeling that you're in over your head. No strings attached.</p>
+        <a class="link" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}mailto:learning.agency@ucdenver.edu?subject=Free%20project%20plan{{/if}}">Get your {{@custom.cta_label}} <span class="arr" aria-hidden="true">→</span></a>
       </div>
       <figure class="feature-media">
         {{#if @custom.director_photo}}
@@ -175,13 +175,13 @@
   {{!-- COST --}}
   <section id="cost" class="cost" aria-labelledby="cost-h">
     <div class="wrap">
-      <div class="sec-head"><h2 id="cost-h">What It Costs</h2><p>Start with a conversation. Pay only for the hours your project uses.</p></div>
+      <div class="sec-head"><h2 id="cost-h">What It Costs</h2><p>Start with a free project plan. Pay only for the hours your project uses.</p></div>
       <div class="cost-grid">
         <ul class="tiers">
-          <li class="free"><span>First conversation</span><b>Free</b><small>An hour with Brad about your project. No strings attached.</small></li>
+          <li class="free"><span>Project plan</span><b>Free</b><small>An hour with Brad to map out your project. No strings attached.</small></li>
           <li><span>SEHD faculty &amp; programs</span><b>No cost</b><small>Design, redesign, or media for your course.</small></li>
           <li><span>Agency alumni who mentor</span><b>No cost</b><small>Bring a project, mentor the student we assign.</small></li>
-          <li><span>Hosting</span><b>Scoped per project</b><small>We'll talk it through in your first hour.</small></li>
+          <li><span>Hosting</span><b>Scoped per project</b><small>We'll talk it through as part of your project plan.</small></li>
         </ul>
         <div class="est" data-rate="40">
           <p class="est-k">Project assistance</p>
@@ -208,7 +208,7 @@
     <div class="wrap">
       <div class="sec-head"><h2>How It Works</h2><p>A partnership, not a purchase. You get help; a future learning designer gets a start.</p></div>
       <ol class="steps">
-        <li><h3>Talk with Brad</h3><p>Your free first hour. Tell us what you need and when, and we'll help you size it.</p></li>
+        <li><h3>Talk with Brad</h3><p>Your free project plan. Tell us what you need and when, and we'll help you map it out.</p></li>
         <li><h3>Get matched</h3><p>We pair you with the graduate student whose skills fit your project best.</p></li>
         <li><h3>Work together</h3><p>Remote and mostly asynchronous, with check-ins by video call. Your student has a faculty mentor behind them the whole way.</p></li>
         <li><h3>Keep it going</h3><p>When the work is done, you'll know how to run it, update it, and grow it.</p></li>
@@ -294,7 +294,7 @@
       <div class="sec-head"><h2>Questions</h2></div>
       <div class="faq">
         <details><summary>Who will actually do the work?</summary><p>A graduate student in CU Denver's Learning Design &amp; Technology program, enrolled in the INTE 6930 internship, with a faculty member guiding them. You're their client and, in a real sense, their mentor.</p></details>
-        <details><summary>What does the free first hour involve?</summary><p>A conversation with Brad Hinson about your project: what you need, what's possible, and whether the Agency is a good fit. No commitment.</p></details>
+        <details><summary>What's the free project plan?</summary><p>An hour with Brad Hinson to talk through your project: what you need, what's possible, and whether the Agency is a good fit. No commitment.</p></details>
         <details><summary>What does it cost after that?</summary><p>$40 per hour for project assistance, bought as a block of hours through the CU Denver storefront. Hours stay banked until your project uses them. Projects with SEHD faculty and programs, and with Agency alumni who mentor, are free. Hosting is scoped per project.</p></details>
         <details><summary>Will I be able to maintain it myself?</summary><p>That's part of the point. Your student will show you how to run, update, and grow what you've built together.</p></details>
       </div>
@@ -311,7 +311,7 @@
           <p>Our students become graduates, then mentors, then the people who send the next project our way. Join a community that keeps learning together.</p>
         </div>
         <div class="band-btns">
-          <a class="btn dark wide" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}mailto:learning.agency@ucdenver.edu?subject=Free%20first%20hour{{/if}}">Book a Free First Hour <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn dark wide" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}mailto:learning.agency@ucdenver.edu?subject=Free%20project%20plan{{/if}}">{{@custom.cta_label}} <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn dark wide" href="https://secure.touchnet.net/C20369_ustores/web/product_detail.jsp?PRODUCTID=514">Buy Project Hours <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn dark wide" href="{{@site.url}}/students/">For LDT Students <span class="arr" aria-hidden="true">→</span></a>
         </div>
