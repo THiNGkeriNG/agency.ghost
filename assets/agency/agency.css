@@ -102,14 +102,20 @@ section.tint{background:var(--cream-2)}
 .ph .pv{background:#fff}
 @media (min-width:760px){.hero-panel{margin-inline:calc(-1 * max(32px,env(safe-area-inset-left,0px)));padding-inline:2rem}}
 @media (min-width:860px){
-  .hero{padding-block:2.75rem}
-  .hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);min-height:300px}
-  /* panel bleeds left to the viewport edge; clip-path extends past its box so the bleed is painted */
-  .hero-panel{margin:0 -7rem 0 0;padding:2.5rem 9rem 2.5rem 0;clip-path:polygon(-100vw 0,100% 0,calc(100% - 4.5rem) 100%,-100vw 100%)}
+  .hero{padding-block:2.5rem}
+  /* panel ≈ 1/3 width, shorter than the image and centered on it; slanted edge overlaps the image */
+  .hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,2fr);align-items:center}
+  .hero-panel{grid-column:1;grid-row:1;align-self:center;margin:0 -4.5rem 0 0;padding:1.6rem 6rem 1.7rem 0;clip-path:polygon(-100vw 0,100% 0,calc(100% - 3.5rem) 100%,-100vw 100%)}
   .hero-panel::before{content:"";position:absolute;top:0;bottom:0;right:100%;width:100vw;background:#fff}
-  .hero-media{height:340px;margin-top:0}
+  .hero h1{font-size:clamp(1.75rem,2.5vw,2.25rem)}
+  .hero .lede{font-size:.98rem;line-height:1.45;margin-top:.7rem}
+  .hero .ctas{margin-top:1rem;gap:.7rem 1.2rem}
+  .hero-media{grid-column:2;grid-row:1;height:420px;margin-top:0}
   .hero-media::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border:2px solid #fff;clip-path:polygon(9% 0,100% 0,100% 100%,0 100%,0 14%);pointer-events:none;z-index:1}
   .hero-media img,.hero-media .ph{position:absolute;inset:0;height:100%}
+  /* students: course card instead of a photo keeps a wider panel */
+  .hero.course-hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+  .hero.course-hero .hero-panel{margin-right:-5rem;padding-right:7rem}
 }
 
 /* students hero: course card stands in for the photo */
@@ -121,7 +127,7 @@ section.tint{background:var(--cream-2)}
 .course dl div{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.6rem 0;border-bottom:1px solid #222}
 .course dl div:last-child{border-bottom:0}
 .course dt{color:#b9b6ad;font-size:.92rem}
-@media (min-width:860px){.hero-media.course{margin-left:7.5rem}}
+@media (min-width:860px){.hero-media.course{height:auto;margin-left:6rem}}
 @media (max-width:859px){.hero-media.course{margin-top:1.75rem}}
 @media (max-width:480px){.course dl div{grid-template-columns:1fr;gap:.1rem}}
 
