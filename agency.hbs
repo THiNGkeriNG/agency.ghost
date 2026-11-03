@@ -6,69 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
     <link rel="stylesheet" href="{{asset "agency/agency.css"}}">
     <script>document.documentElement.classList.add('js')</script>
     {{ghost_head}}
 </head>
 <body class="{{body_class}}{{#unless @custom.show_preview_notes}} hide-pv{{/unless}}">
 
-<div class="util">
-  <div class="wrap">
-    {{#if @custom.cu_logo}}
-    <span class="lockup has-logo"><a href="https://www.ucdenver.edu/"><img src="{{img_url @custom.cu_logo size="s"}}" alt="CU Denver"></a><span>School of Education &amp; Human Development</span></span>
-    {{else}}
-    <span class="lockup">CU Denver <span>·</span> School of Education &amp; Human Development</span>
-    {{/if}}
-    <nav aria-label="University">
-      <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">Learning Design &amp; Technology</a>
-      <a href="https://education.ucdenver.edu/">SEHD</a>
-      <a href="https://www.ucdenver.edu/">CU Denver</a>
-    </nav>
-  </div>
-</div>
+<a class="skip" href="#top">Skip to content</a>
 
 <header class="site">
   <div class="wrap">
-    <a class="mark{{#if @site.logo}} has-logo{{/if}}{{#if @custom.compact_logo}} has-compact{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img class="logo-full" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}">{{#if @custom.compact_logo}}<img class="logo-compact" src="{{img_url @custom.compact_logo size="l"}}" alt="" aria-hidden="true">{{/if}}{{else}}<i aria-hidden="true"></i><b>{{@site.title}}</b>{{/if}}</a>
-    <div class="hd-right">
-      <nav class="switch" aria-label="Audience">
-        <a href="{{@site.url}}/" {{#is "home"}}aria-current="page"{{/is}}>For clients</a>
-        <a href="{{@site.url}}/students/" {{#is "page"}}aria-current="page"{{/is}}>For students</a>
-      </nav>
-      <nav class="mainnav" aria-label="Main">
-        {{#is "home"}}
-        <a href="#services">Services</a>
-        <a href="#platforms">Platforms</a>
-        <a href="#who">Partners</a>
-        <a href="#work">Work</a>
-        <a class="btn sm" href="#contact">Contact</a>
-        {{else}}
-        <a href="#ways">Projects</a>
-        <a href="#how">How it works</a>
-        <a href="#alumni">Alumni</a>
-        <a class="btn sm" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply</a>
-        {{/is}}
-      </nav>
-    </div>
+    <a class="mark{{#if @site.logo}} has-logo{{/if}}{{#if @custom.compact_logo}} has-compact{{/if}}" href="{{@site.url}}/" aria-label="{{@site.title}}, home">{{#if @site.logo}}<img class="logo-full" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}">{{#if @custom.compact_logo}}<img class="logo-compact" src="{{img_url @custom.compact_logo size="l"}}" alt="" aria-hidden="true">{{/if}}{{else}}<b>{{@site.title}}</b><small>University of Colorado Denver</small>{{/if}}</a>
+    <nav class="mainnav" aria-label="Main">
+      {{#is "home"}}
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#cost">Cost</a>
+      <a href="#work">Our Work</a>
+      <a href="{{@site.url}}/students/">For Students</a>
+      {{else}}
+      <a href="{{@site.url}}/">For Clients</a>
+      <a href="#get">What You Get</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">Questions</a>
+      {{/is}}
+    </nav>
+    {{#is "home"}}
+    <a class="btn dark sm" href="{{#if @custom.booking_link}}{{@custom.booking_link}}{{else}}#first-hour{{/if}}">Free First Hour <span class="arr" aria-hidden="true">→</span></a>
+    {{else}}
+    <a class="btn dark sm" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr" aria-hidden="true">→</span></a>
+    {{/is}}
   </div>
-  <div class="progress" aria-hidden="true"><i></i></div>
 </header>
 
 {{{body}}}
 
-<footer>
-  <div class="wrap">
-    <div class="foot-id">
-      {{#if @custom.cu_logo}}<a href="https://www.ucdenver.edu/"><img src="{{img_url @custom.cu_logo size="s"}}" alt="CU Denver"></a>{{/if}}
-      <span>© {{date format="YYYY"}} {{@site.title}} · School of Education &amp; Human Development · University of Colorado Denver</span>
+<footer class="site">
+  <div class="foot-top">
+    <div class="wrap">
+      <div class="foot-contact">
+        <p class="foot-name">{{@site.title}}</p>
+        <p>School of Education &amp; Human Development<br>1380 Lawrence Street, Suite 724<br>Denver, CO 80204</p>
+        <p><a href="mailto:learning.agency@ucdenver.edu">learning.agency@ucdenver.edu</a></p>
+      </div>
+      <nav class="foot-col" aria-label="Clients">
+        <h2>For Clients</h2>
+        <a href="{{@site.url}}/#services">Services</a>
+        <a href="{{@site.url}}/#how">How It Works</a>
+        <a href="{{@site.url}}/#cost">Cost</a>
+        <a href="{{@site.url}}/#faq">Questions</a>
+      </nav>
+      <nav class="foot-col" aria-label="Students">
+        <h2>For Students</h2>
+        <a href="{{@site.url}}/students/">Agency Projects</a>
+        <a href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply</a>
+        <a href="{{@site.url}}/students/#alumni">Alumni &amp; Community</a>
+      </nav>
+      <nav class="foot-col" aria-label="University">
+        <h2>CU Denver</h2>
+        <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">Learning Design &amp; Technology</a>
+        <a href="https://education.ucdenver.edu/">School of Education &amp; Human Development</a>
+        <a href="https://www.ucdenver.edu/">University of Colorado Denver</a>
+      </nav>
     </div>
-    <nav aria-label="Footer">
-      <a href="{{@site.url}}/">For clients</a>
-      <a href="{{@site.url}}/students/">For students</a>
-      <a href="https://education.ucdenver.edu/academics/areas-of-study/learning-design-technology/">LDT</a>
-      <a href="https://education.ucdenver.edu/">SEHD</a>
-    </nav>
+  </div>
+  <div class="foot-bar">
+    <div class="wrap">
+      <span class="foot-lockup"><b>{{@site.title}}</b> University of Colorado <strong>Denver</strong></span>
+      <span class="legal">© {{date format="YYYY"}} {{@site.title}} · School of Education &amp; Human Development · University of Colorado Denver</span>
+    </div>
   </div>
 </footer>
 

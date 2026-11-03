@@ -1,7 +1,7 @@
 {
-    "name": "agency",
-    "description": "Custom theme for The Learning Agency, built on Ghost Source",
-    "version": "0.1.0",
+    "name": "agency-cu",
+    "description": "Student Agency at CU Denver \u2014 design 2, modeled on cudenver.edu",
+    "version": "0.2.0",
     "engines": {
         "ghost": ">=5.0.0",
         "node": ">=22.12.0"
@@ -146,54 +146,43 @@
                 "default": true,
                 "group": "post"
             },
-            "cu_logo": {
-                "type": "image",
-                "description": "Small CU Denver logo for the top bar and footer. Both sit on black, so use a white or reversed version."
-            },
             "compact_logo": {
                 "type": "image",
                 "description": "One-line logo the header switches to after you scroll. Leave empty to just shrink the main logo."
+            },
+            "director_photo": {
+                "type": "image",
+                "description": "Brad's photo for the 'Your first hour' section."
+            },
+            "booking_link": {
+                "type": "text",
+                "default": "",
+                "description": "Scheduling link for the free first hour (Calendly, Microsoft Bookings\u2026). Leave empty to use email."
             },
             "show_preview_notes": {
                 "type": "boolean",
                 "default": true,
                 "description": "Show the red dashed 'Preview' markers on unfinished content. Turn off before launch."
             },
-            "hero_eyebrow": {
-                "type": "text",
-                "default": "A learning design studio at CU Denver",
-                "group": "homepage"
-            },
             "hero_headline": {
                 "type": "text",
-                "default": "Learning design that gets built, by the designers",
+                "default": "Kind, Affordable Help Going Digital.",
                 "group": "homepage"
-            },
-            "hero_headline_accent": {
-                "type": "text",
-                "default": "learning to build it.",
-                "group": "homepage",
-                "description": "Shown in gold after the headline."
             },
             "hero_intro": {
                 "type": "text",
-                "default": "We design, produce, and host courses, e-learning, and media. The work is done by Learning Design & Technology graduate students, each matched to the project that fits.",
+                "default": "Graduate students from CU Denver's School of Education help you build your course, training, or media, and show you how to keep it going.",
                 "group": "homepage"
             },
             "students_headline": {
                 "type": "text",
-                "default": "Practice the profession",
+                "default": "Practice the Profession Before You Graduate.",
                 "description": "Students page headline."
-            },
-            "students_headline_accent": {
-                "type": "text",
-                "default": "before you graduate.",
-                "description": "Students page: highlighted end of the headline."
             },
             "students_intro": {
                 "type": "text",
-                "default": "Agency projects put you on real learning design work for real clients, with the software and the people of the field. Tell us what you want to get better at, and we'll find the project and the client mentor to match.",
-                "description": "Students page intro paragraph."
+                "default": "Agency projects put you on real learning design work for real clients, with the software and the people of the field. Credit now, a community for good.",
+                "description": "Students page intro."
             }
         }
     }

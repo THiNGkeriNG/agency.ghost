@@ -1,4 +1,6 @@
-# agency theme
+# agency-cu theme (design 2)
+
+Design 1 (black/gold studio, theme name `agency`) is preserved on branch `v1-studio` and stays installed in Ghost. `main` is design 2: modeled on cudenver.edu — short gold hero with slanted white panel, italic condensed headings (Archivo wdth ~78%), cream "at a glance" stats, black cards with teal corner (#2A8288), gold community band, cream + black footer. Light only.
 
 Custom Ghost theme for The Learning Agency site (agency.cu.studio, Ghost on Cloudron). Forked from Ghost's Source theme 1.7.6.
 
@@ -17,7 +19,7 @@ pnpm install --frozen-lockfile · pnpm build · pnpm dev
 - Design source of truth: the "The Learning Agency" artifact (claude.ai/artifact/7VoDkWxC77L9F2AyktaQjJ). Brand: CU Denver black/white/gold #CFB87C, Archivo (wide display), Source Sans 3, IBM Plex Mono.
 - `.pv` elements are preview annotations; hidden site-wide by the `show_preview_notes` setting.
 - `assets/agency/` is deliberately outside `assets/js` so gulp doesn't bundle it into source.js.
-- Ghost admin controls (Settings → Design → Theme): `cu_logo`, `show_preview_notes`, homepage hero text (eyebrow, headline, accent, intro), students hero text. Site logo and title come from Settings → General. Ghost caps themes at 20 custom settings; all 20 are used (compact_logo added) — Source's homepage settings were retired to make room.
+- Ghost admin controls (Settings → Design → Theme): compact_logo, director_photo, booking_link, show_preview_notes, hero headline/intro, students headline/intro (18 of 20 settings). Site logo, title, and Publication cover (hero photo) come from Settings → General.
 
 ## Editable sections
 - Landing sections render from Ghost pages by slug when published (`{{#get "pages"}}`), else fall back to the hard-coded markup in the template. Slugs: home-services, home-platforms, home-partners, home-clients, home-how, home-faq; students-what-you-get, students-ways-in, students-how, students-alumni, students-faq.

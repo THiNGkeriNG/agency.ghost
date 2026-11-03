@@ -1,206 +1,136 @@
 {{!< agency}}
 <main id="top" class="tla">
-  <div class="hero gold">
+
+  <section class="hero" aria-labelledby="hero-h">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">For LDT students</p>
-        <h1>{{@custom.students_headline}}{{#if @custom.students_headline_accent}} <em>{{@custom.students_headline_accent}}</em>{{/if}}</h1>
+      <div class="hero-panel">
+        <h1 id="hero-h">{{@custom.students_headline}}</h1>
         {{#if @custom.students_intro}}<p class="lede">{{@custom.students_intro}}</p>{{/if}}
         <div class="ctas">
-          <a class="btn dark" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr">→</span></a>
-          <a class="btn ghost" href="#syllabus" id="syllabus">Syllabus</a>
-          <span class="pv">Preview: syllabus link to come</span>
+          <a class="btn dark" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr" aria-hidden="true">→</span></a>
+          <a class="link" href="#syllabus" id="syllabus">Syllabus</a><span class="pv">Preview: syllabus link to come</span>
         </div>
       </div>
-      <div class="course">
-        <div class="hd"><b class="mono">INTE 6930</b><span class="req">Required to participate</span></div>
+      <div class="hero-media course">
+        <div class="course-hd"><b>INTE 6930</b><span>Required to participate</span></div>
         <dl>
           <div><dt>Course</dt><dd>Internship in Learning Design &amp; Technology</dd></div>
-          <div><dt>MA students</dt><dd>Take it up to 3 times toward the degree.</dd></div>
-          <div><dt>Certificate</dt><dd>Take it once toward the certificate.</dd></div>
-          <div><dt>Hours</dt><dd>90 hours of project work per enrollment. <span class="pv">Confirm</span></dd></div>
-          <div><dt>Format</dt><dd>Part-time, remote, and mostly asynchronous.</dd></div>
+          <div><dt>MA students</dt><dd>Up to 3 times toward the degree</dd></div>
+          <div><dt>Certificate</dt><dd>Once toward the certificate</dd></div>
+          <div><dt>Format</dt><dd>Part-time, remote, mostly asynchronous</dd></div>
           <div><dt>Faculty</dt><dd>Brad Hinson, Director</dd></div>
         </dl>
       </div>
     </div>
-  </div>
+  </section>
 
-  {{#get "pages" filter="slug:students-what-you-get" limit="1"}}{{#foreach pages}}
+  <section class="glance" aria-labelledby="glance-h">
+    <div class="wrap">
+      <h2 id="glance-h">What an Agency Project Gives You</h2>
+      <ul class="stats">
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6h20v20H6z"/><path d="M11 12h10M11 16h10M11 20h6"/></svg><b>Credit</b><span>INTE 6930 internship credit toward your MA or certificate.</span></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h24v15H4z"/><path d="M12 9V6h8v3"/></svg><b>A Real Client</b><span>An organization, a CU professor, or an Agency graduate who needs your help.</span></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="11" r="4"/><circle cx="22" cy="11" r="4"/><path d="M4 26c0-4 3-7 7-7s7 3 7 7M15 26c0-4 3-7 7-7s7 3 7 7"/></svg><b>2 Mentors</b><span>Your client, and the faculty member behind you.</span></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 5v22M5 16h22"/></svg><b>For Life</b><span>A seat in the Agency community after you graduate.</span></li>
+      </ul>
+    </div>
+  </section>
+
+{{#get "pages" filter="slug:students-what-you-get" limit="1"}}{{#foreach pages}}
   <section id="get" class="ed ed-get">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">What you get</p>
-        <h2>{{title}}</h2>
-        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-      </div>
+      <div class="sec-head"><h2>{{title}}</h2>{{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}</div>
       <div class="sec-body">{{content}}</div>
     </div>
   </section>
 {{/foreach}}{{else}}
   <section id="get">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">What you get</p>
-        <h2>Real projects, the profession's tools, and people who do this work.</h2>
-        <p>Each project is chosen for the skills you want to build. Here's what that can look like.</p>
-      </div>
-      <div class="cols">
-        <article><span class="tag">Higher education</span><h3>Master Canvas</h3><p>Design and build courses for higher education clients in the LMS most universities run on.</p><span class="tools">Canvas</span></article>
-        <article><span class="tag">Corporate training</span><h3>Develop e-learning</h3><p>Build self-paced modules for workplace training, the way corporate L&amp;D teams do.</p><span class="tools">Articulate 360 · Rise · Storyline</span></article>
-        <article><span class="tag">Media</span><h3>Produce instructional media</h3><p>Make video and podcasts for broad distribution, from recording through publishing.</p><span class="tools">Riverside · YouTube · Wistia · PodBean</span></article>
+      <div class="sec-head"><h2>Skills You Can Build</h2><p>Each project is chosen for what you want to get better at.</p></div>
+      <div class="cards">
+        <div class="xcard static"><div class="xart a1" aria-hidden="true"></div><div class="xbody"><h3>Master Canvas</h3><p>Design and build courses for higher education clients in the LMS most universities run on.</p></div></div>
+        <div class="xcard static"><div class="xart a2" aria-hidden="true"></div><div class="xbody"><h3>Develop E-learning</h3><p>Build self-paced modules for workplace training in Articulate 360, the way corporate L&amp;D teams do.</p></div></div>
+        <div class="xcard static"><div class="xart a3" aria-hidden="true"></div><div class="xbody"><h3>Produce Media</h3><p>Make video and podcasts for broad distribution, from recording through publishing.</p></div></div>
       </div>
     </div>
   </section>
 {{/get}}
 
-  {{#get "pages" filter="slug:students-ways-in" limit="1"}}{{#foreach pages}}
-  <div class="ed ed-ways band pad" id="ways">
+{{#get "pages" filter="slug:students-how" limit="1"}}{{#foreach pages}}
+  <section id="how" class="ed ed-how tint">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Three ways in</p>
-        <h2>{{title}}</h2>
-        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-      </div>
-      <div class="sec-body">{{content}}</div>
-    </div>
-  </div>
-{{/foreach}}{{else}}
-  <div class="band pad" id="ways">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Three ways in</p>
-        <h2>Who you might work with.</h2>
-        <p>Every project gives you a client mentor working in the field.</p>
-      </div>
-      <div class="cols">
-        <article><span class="tag">Client projects</span><h3>An outside organization</h3><p>Schools, agencies, nonprofits, and companies that hire the Agency for design, production, or hosting.</p></article>
-        <article><span class="tag">Professor partnerships</span><h3>A CU professor</h3><p>Work directly with a faculty member on the design, redesign, media, or polish of their Canvas course or piece of media.</p></article>
-        <article><span class="tag">Alumni partnerships</span><h3>An Agency graduate</h3><p>Partner with a former Agency student now working in higher ed, K-12, corporate, nonprofit, or freelance learning design.</p></article>
-      </div>
-      <p class="quote">This is not employment. Doing is learning.</p>
-    </div>
-  </div>
-{{/get}}
-
-  {{#get "pages" filter="slug:students-how" limit="1"}}{{#foreach pages}}
-  <section id="how" class="ed ed-how">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">How it works</p>
-        <h2>{{title}}</h2>
-        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-      </div>
+      <div class="sec-head"><h2>{{title}}</h2>{{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}</div>
       <div class="sec-body">{{content}}</div>
     </div>
   </section>
 {{/foreach}}{{else}}
-  <section id="how">
+  <section id="how" class="tint">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">How it works</p>
-        <h2>From application to your first client.</h2>
-        <p><span class="pv">Preview: check this sequence against how you actually run intake.</span></p>
-      </div>
+      <div class="sec-head"><h2>How It Works</h2><span class="pv">Preview: check this against how you run intake</span></div>
       <ol class="steps">
         <li><h3>Apply</h3><p>Tell us about your skills, your schedule, and what you want to get better at.</p></li>
-        <li><h3>Meet with Brad</h3><p>Brad Hinson meets with every student to talk through interests and find the right fit.</p></li>
+        <li><h3>Meet with Brad</h3><p>Every student meets with the director to talk through interests and find the right fit.</p></li>
         <li><h3>Enroll in INTE 6930</h3><p>The internship course is required. It's where your project work earns credit.</p></li>
-        <li><h3>Start your project</h3><p>Meet your client mentor and get to work, remote and mostly asynchronous, with check-ins by video call.</p></li>
+        <li><h3>Start your project</h3><p>Meet your client and get to work, remote and mostly asynchronous, with check-ins by video call.</p></li>
       </ol>
     </div>
   </section>
 {{/get}}
 
-  {{#get "pages" filter="slug:students-alumni" limit="1"}}{{#foreach pages}}
-  <section class="ed ed-alumni alumni alt" id="alumni">
+{{#get "pages" filter="slug:students-alumni" limit="1"}}{{#foreach pages}}
+  <section id="alumni" class="ed ed-alumni">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">After graduation</p>
-        <h2>{{title}}</h2>
-        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-      </div>
+      <div class="sec-head"><h2>{{title}}</h2>{{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}</div>
       <div class="sec-body">{{content}}</div>
     </div>
   </section>
 {{/foreach}}{{else}}
-  <section class="alumni alt" id="alumni">
+  <section id="alumni">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">After graduation</p>
-        <h2>Once Agency, <em>always Agency.</em></h2>
-        <p class="lede">Our alumni work across higher ed, K-12, corporate, nonprofit, and freelance learning design. When you need help on a project and want to mentor, come back. We'll assign an LDT intern to your project at no cost.</p>
-      </div>
+      <div class="sec-head"><h2>A Community, Not Just a Course</h2><p>Finish the internship and you keep your seat in the Agency.</p></div>
       <ol class="loop">
         <li><b>As a student</b><span>You learn on real projects, mentored by working professionals, many of them Agency alumni.</span></li>
-        <li><b>As a graduate</b><span>You join the Agency alumni network working across the field.</span></li>
-        <li><b>As a mentor</b><span>You bring us a project. We match you with an intern, free, and you mentor the next designer.</span></li>
+        <li><b>As a graduate</b><span>You join the Agency alumni community working across higher ed, K-12, corporate, nonprofit, and freelance learning design.</span></li>
+        <li><b>As a mentor</b><span>Bring the Agency a project. We'll match you with a student at no cost, and you mentor the next designer.</span></li>
       </ol>
     </div>
   </section>
 {{/get}}
 
-  {{#get "pages" filter="slug:students-faq" limit="1"}}{{#foreach pages}}
-  <section id="faq" class="ed ed-faq">
+{{#get "pages" filter="slug:students-faq" limit="1"}}{{#foreach pages}}
+  <section id="faq" class="ed ed-faq tint">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Questions</p>
-        <h2>{{title}}</h2>
-        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-      </div>
+      <div class="sec-head"><h2>{{title}}</h2>{{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}</div>
       <div class="sec-body">{{content}}</div>
     </div>
   </section>
 {{/foreach}}{{else}}
-  <section id="faq">
+  <section id="faq" class="tint">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Questions</p>
-        <h2>For students.</h2>
-      </div>
+      <div class="sec-head"><h2>Questions</h2></div>
       <div class="faq">
         <details><summary>Do I have to enroll in a course?</summary><p>Yes. INTE 6930 is required to participate. MA students can take it up to 3 times toward the degree; certificate students take it once.</p></details>
-        <details><summary>Is this a job?</summary><p>No. This is not employment. Agency projects are learning experiences, taken for credit.</p></details>
-        <details><summary>How are projects assigned?</summary><p>Brad Hinson meets with every student and every client. We look for a project that builds the skills you're after and a client who needs what you can offer.</p></details>
+        <details><summary>Is this a job?</summary><p>No. Agency projects are learning experiences, taken for credit.</p></details>
         <details><summary>How much time does it take?</summary><p>Projects run part-time and remotely. Most work is asynchronous, with check-ins by video call, so it can fit around a full-time job.</p></details>
-        <details><summary>What software will I use?</summary><p>Whatever the client uses. Agency projects have run on Canvas, Blackboard, Thinkific, Teachable, Circle.so, Articulate Rise and Storyline, Adobe Creative Suite, Riverside.fm, Podbean, YouTube, Ghost, WordPress, Shorthand, and AI tools like ChatGPT, Claude, and Gemini. Learning a new platform quickly is part of the job.</p></details>
+        <details><summary>What software will I use?</summary><p>Whatever the client uses: Canvas, Articulate Rise and Storyline, Adobe Creative Suite, Riverside, YouTube, Ghost, WordPress, and AI tools like ChatGPT, Claude, and Gemini. Learning a new platform quickly is part of the job.</p></details>
       </div>
     </div>
   </section>
 {{/get}}
 
-  <div class="cross">
+  <section class="band" aria-labelledby="band-h">
     <div class="wrap">
-      <p>Have a project for the Agency?<span>Clients, SEHD faculty, and alumni partners start here.</span></p>
-      <a class="btn ghost" href="{{@site.url}}/">For clients <span class="arr">→</span></a>
+      <div class="band-panel">
+        <div>
+          <h2 id="band-h">Once Agency, Always Agency.</h2>
+          <p>Applications take a few minutes. Questions first? Email us and we'll set up a time to talk.</p>
+        </div>
+        <div class="band-btns">
+          <a class="btn dark wide" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply to the Agency <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn dark wide" href="mailto:learning.agency@ucdenver.edu?subject=Student%20question">Email the Agency <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="band contact" id="contact">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">Ready?</p>
-        <h2>Apply to the Agency.</h2>
-        <p class="lede">Applications take a few minutes. Questions first? Email us and we'll set up a time to talk.</p>
-        <div class="ctas">
-          <a class="btn" href="https://airtable.com/appt9xab3BqnSbpli/pagiObdQWvRdjgY40/form">Apply <span class="arr">→</span></a>
-          <a class="btn ghost" href="mailto:learning.agency@ucdenver.edu?subject=Student%20question">Email the Agency</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="row">
-          <span class="k">Email</span>
-          <div class="copy"><span class="v" id="email">learning.agency@ucdenver.edu</span><button type="button" id="copy-email">Copy</button></div>
-        </div>
-        <div class="row">
-          <span class="k">Director &amp; faculty</span>
-          <span class="v">Brad Hinson<small>Director, The Learning Agency · Faculty, INTE 6930</small></span>
-        </div>
-        <div class="row">
-          <span class="k">Office</span>
-          <span class="v">1380 Lawrence Street, Suite 724<small>Denver, CO 80204</small></span>
-        </div>
-      </div>
-    </div>
-  </div>
 </main>
