@@ -29,3 +29,4 @@ pnpm install --frozen-lockfile · pnpm build · pnpm dev
 - Section pages redirect to the landing page (page.hbs `{{#has slug=...}}`) — keep that list in sync when adding sections.
 - Selected Work = posts with internal tag `#work`.
 - `scripts/seed-sections.*` + seed workflow create missing section pages as drafts (idempotent).
+- Hero image slot defaults to the "go digital" component (partials/go-digital.hbs): drag a divider (range input under the hood) between an analog artifact and its finished digital version; three examples via buttons. Depth planes .p0–.p3 move with pointer and hero scroll. Theme setting `hero_media` = Interactive | Photo (20 of 20 settings used).

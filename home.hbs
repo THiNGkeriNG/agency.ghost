@@ -12,6 +12,7 @@
           <a class="link" href="#cost">See what it costs</a>
         </div>
       </div>
+      {{#match @custom.hero_media "Photo"}}
       <figure class="hero-media">
         {{#if @site.cover_image}}
         <img src="{{img_url @site.cover_image size="l"}}" alt="" fetchpriority="high">
@@ -19,6 +20,9 @@
         <div class="ph"><span class="pv">Preview: add a photo as the Publication cover (Settings → General)</span></div>
         {{/if}}
       </figure>
+      {{else}}
+      <div class="hero-media has-gd">{{> "go-digital"}}</div>
+      {{/match}}
     </div>
   </section>
 

@@ -1,0 +1,101 @@
+{{!-- Hero signature: drag the line to take something analog digital. Three of the visitor's own artifacts. --}}
+<div class="gd" data-gd data-scene="course" style="--x:50">
+  <div class="gd-stage" data-gd-stage>
+
+    {{!-- BEFORE (left of the line) --}}
+    <div class="gd-side gd-before" aria-hidden="true">
+      <div class="gd-pair" data-for="course">
+        <div class="gd-desk p0"></div>
+        <div class="gd-sheet back p1"></div>
+        <div class="gd-sheet binder p2">
+          <i class="holes"></i>
+          <p class="hand t">Volunteer Training, Section 3</p>
+          <p class="hand">1. Welcome + sign in sheet</p>
+          <p class="hand"><s>2. Watch DVD</s> (lost?)</p>
+          <p class="hand">3. Read pages 14 to 22</p>
+          <p class="hand">4. Quiz on paper, return to front desk</p>
+          <i class="ring"></i>
+        </div>
+        <div class="gd-sticky p3"><p class="hand">update this!!</p></div>
+      </div>
+      <div class="gd-pair" data-for="video">
+        <div class="gd-desk wall p0"></div>
+        <div class="gd-board p1">
+          <p class="mark t">Intake process?</p>
+          <p class="mark">1. call  2. forms  3. ???</p>
+          <p class="mark arrow">explain it every time</p>
+        </div>
+        <div class="gd-sticky pink p3"><p class="hand">film this sometime</p></div>
+      </div>
+      <div class="gd-pair" data-for="podcast">
+        <div class="gd-desk p0"></div>
+        <div class="gd-sheet pad p2">
+          <p class="hand t">Podcast idea</p>
+          <p class="hand">Ep 1: why we started</p>
+          <p class="hand">Ep 2: meet the families</p>
+          <p class="hand">Ep 3: ???</p>
+          <p class="hand">how do people even listen?</p>
+        </div>
+        <div class="gd-phone p3"><span>New Recording 14</span><b>0:47</b></div>
+      </div>
+    </div>
+
+    {{!-- AFTER (right of the line) --}}
+    <div class="gd-side gd-after" aria-hidden="true">
+      <div class="gd-pair" data-for="course">
+        <div class="gd-field p0"></div>
+        <div class="gd-win p2">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="app">
+            <nav><b>Course</b><span>Home</span><span class="on">Modules</span><span>Grades</span></nav>
+            <div class="main">
+              <p class="crumb">Volunteer Training</p>
+              <p class="h">Module 3: Working with families</p>
+              <ul>
+                <li class="done"><i class="ic play"></i>Welcome video <em>4 min</em></li>
+                <li class="done"><i class="ic doc"></i>Reading: our approach <em>8 min</em></li>
+                <li><i class="ic check"></i>Check your understanding <em>5 questions</em></li>
+              </ul>
+              <div class="prog"><i style="width:66%"></i></div>
+              <p class="note">2 of 3 complete</p>
+            </div>
+          </div>
+        </div>
+        <div class="gd-toast p3"><i class="ic ok"></i>Published to Canvas</div>
+      </div>
+      <div class="gd-pair" data-for="video">
+        <div class="gd-field p0"></div>
+        <div class="gd-win video p2">
+          <div class="screen"><p>How intake works</p><i class="playbtn"></i><span class="cc">CC</span></div>
+          <div class="chapters"><span class="on">1. The first call</span><span>2. The forms</span><span>3. What happens next</span></div>
+        </div>
+        <div class="gd-toast p3"><i class="ic ok"></i>Captions added</div>
+      </div>
+      <div class="gd-pair" data-for="podcast">
+        <div class="gd-field p0"></div>
+        <div class="gd-win pod p2">
+          <div class="art"><i class="mic"></i></div>
+          <div class="meta">
+            <p class="crumb">Episode 1</p>
+            <p class="h">Why we started</p>
+            <div class="wave">{{!-- bars --}}<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="note">Spotify · Apple Podcasts · YouTube</p>
+          </div>
+        </div>
+        <div class="gd-toast p3"><i class="ic ok"></i>Live on 3 platforms</div>
+      </div>
+    </div>
+
+    <span class="gd-tag l" aria-hidden="true">Before</span>
+    <span class="gd-tag r" aria-hidden="true">With the Agency</span>
+    <div class="gd-line" aria-hidden="true"><i class="knob"><svg viewBox="0 0 24 24"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg></i></div>
+    <input class="gd-range" type="range" min="10" max="96" value="50" aria-label="Drag to compare before and after" data-gd-range>
+  </div>
+
+  <div class="gd-tabs" role="group" aria-label="Show an example">
+    <button type="button" aria-pressed="true" data-gd-tab="course">A course</button>
+    <button type="button" aria-pressed="false" data-gd-tab="video">Training videos</button>
+    <button type="button" aria-pressed="false" data-gd-tab="podcast">A podcast</button>
+  </div>
+  <p class="gd-sr" aria-live="polite" data-gd-desc>Before: a paper volunteer training binder with a lost DVD and a paper quiz. With the Agency: the same training as an online Canvas module with a video, a reading, and a quiz.</p>
+</div>

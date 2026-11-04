@@ -170,6 +170,16 @@
                 "default": true,
                 "description": "Show the red dashed 'Preview' markers on unfinished content. Turn off before launch."
             },
+            "hero_media": {
+                "type": "select",
+                "options": [
+                    "Interactive",
+                    "Photo"
+                ],
+                "default": "Interactive",
+                "group": "homepage",
+                "description": "Hero image area: the drag-to-go-digital demo, or the Publication cover photo."
+            },
             "hero_headline": {
                 "type": "text",
                 "default": "Kind, Affordable Help Going Digital.",
