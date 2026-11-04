@@ -110,7 +110,7 @@ section.tint{background:var(--cream-2)}
   .hero h1{font-size:clamp(1.75rem,2.5vw,2.25rem)}
   .hero .lede{font-size:.98rem;line-height:1.45;margin-top:.7rem}
   .hero .ctas{margin-top:1rem;gap:.7rem 1.2rem}
-  .hero-media{grid-column:2;grid-row:1;height:420px;margin-top:0}
+  .hero-media{grid-column:2;grid-row:1;height:420px;margin-top:0;margin-right:calc(24px - max(32px, (100vw - var(--max)) / 2 + 32px))}
   .hero-media::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border:2px solid #fff;clip-path:polygon(9% 0,100% 0,100% 100%,0 100%,0 14%);pointer-events:none;z-index:1}
   .hero-media img,.hero-media .ph{position:absolute;inset:0;height:100%}
   /* students: course card instead of a photo keeps a wider panel */
